@@ -1,0 +1,9 @@
+# interactive find & replace
+find . -type f -name * -exec vim '%s/FIND/REPLACE/gc' -c 'wq' {} \;
+
+# find & replace in file paths
+find . -name *FIND* -exec rename 's/FIND/REPLACE/g' {} \;
+
+# copy & rename batch of files
+for i in `ls FILES-TO-COPY-*`; do cp $i `echo $i | sed "s/FIND/REPLACE/g"`; done
+

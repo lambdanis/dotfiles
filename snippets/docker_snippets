@@ -1,0 +1,10 @@
+# copy a file to my-volume
+# https://github.com/moby/moby/issues/25245#issuecomment-365980572
+docker container create --name dummy -v my-volume:/mydata hello-world
+docker cp myfile.txt dummy:/mydata/myfile.txt
+docker rm dummy
+
+# list my-volume contents
+# https://stackoverflow.com/a/36330903/6006249
+docker run --rm -i -v my-volume:/tmp/myvolume busybox find /tmp/myvolume
+

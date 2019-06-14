@@ -1,0 +1,7 @@
+# PostgreSQL list dummy_enum values
+SELECT enum_range(NULL::dummy_enum);  # array
+SELECT unnest(enum_range(NULL::dummy_enum));  # table
+
+# PostgreSQL list all enums
+SELECT pg_type.typname, pg_enum.enumlabel FROM pg_type JOIN pg_enum ON pg_enum.enumtypid = pg_type.oid;
+
