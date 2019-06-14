@@ -7,3 +7,9 @@ find . -name *FIND* -exec rename 's/FIND/REPLACE/g' {} \;
 # copy & rename batch of files
 for i in `ls FILES-TO-COPY-*`; do cp $i `echo $i | sed "s/FIND/REPLACE/g"`; done
 
+# ssh
+ssh-keygen -t rsa -b 4096 -C "mail@example.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa  # on mac needs -K to save passphrase
+ssh-copy-id -i ~/.ssh/id_rsa user@host
+
