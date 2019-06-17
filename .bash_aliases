@@ -9,6 +9,6 @@ function timestamp {
 
 # python development
 alias rmpyc="find . -name '*.pyc' -delete"
-alias codegrep="grep --exclude-dir={node_modules,.idea,.pytest_cache,.mypy_cache}"
+alias codegrep="grep --exclude-dir={.git,.idea,node_modules,.cache,__pycache__,.pytest_cache,.mypy_cache,*.egg-info} --exclude={*.pyc,*.o,*.gz,*.bz2,*.zip}"
 alias pygrep="codegrep --include=*.py"
 
