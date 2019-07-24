@@ -6,3 +6,11 @@ git config --global core.editor "vim"
 # list files in a commit
 # https://stackoverflow.com/a/424142/6006249
 git diff-tree --no-commit-id --name-only -r <commit_hash>
+git show --pretty="" --name-only <commit_hash>
+
+# delete a tag from origin
+git push -d origin <tag>
+
+# stash including untracked files & a message
+git stash save -u <message>
+
