@@ -13,3 +13,14 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa  # on mac needs -K to save passphrase
 ssh-copy-id -i ~/.ssh/id_rsa user@host
 
+# iterate over lines in file.txt
+while read line; do
+  echo $line
+done < file.txt
+
+# uppercase
+tr a-z A-Z
+
+# cut last 3 characters, lol
+rev | cut -c 4- | rev
+

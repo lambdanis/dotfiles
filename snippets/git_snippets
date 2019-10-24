@@ -3,6 +3,9 @@ git config user.name "Ania Kapuścińska"
 git config user.email "ania0102@gmail.com"
 git config --global core.editor "vim"
 
+# list files in a diff
+git diff --name-only
+
 # list files in a commit
 # https://stackoverflow.com/a/424142/6006249
 git diff-tree --no-commit-id --name-only -r <commit_hash>
