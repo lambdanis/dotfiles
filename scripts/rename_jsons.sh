@@ -1,6 +1,6 @@
 # Rename a batch of json files using values of a json field
 
-directory="$1"  # must not have a slash at the end
+directory="$1"
 field_in_json="id"
 suffix="-renamed"
 
