@@ -12,3 +12,8 @@ alias rmpyc="find . -name '*.pyc' -delete"
 alias codegrep="grep --exclude-dir={.git,.idea,node_modules,.cache,__pycache__,.pytest_cache,.mypy_cache,*.egg-info} --exclude={*.pyc,*.o,*.gz,*.bz2,*.zip}"
 alias pygrep="codegrep --include=*.py"
 
+# docker & k8s
+alias k="kubectl"
+alias mk="minikube"
+alias eval_mk_docker="eval $(minikube docker-env)"
+
