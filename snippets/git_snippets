@@ -17,3 +17,6 @@ git push -d origin <tag>
 # stash including untracked files & a message
 git stash save -u <message>
 
+# repo root
+git rev-parse --show-toplevel
+
