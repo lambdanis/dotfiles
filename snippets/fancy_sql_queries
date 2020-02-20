@@ -1,1 +1,0 @@
-select member from (select jsonb_array_elements(payload->'members') as member from pedigree_action) as subquery where member->>'participantId' = '210019145';

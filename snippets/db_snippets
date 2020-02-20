@@ -5,3 +5,6 @@ SELECT unnest(enum_range(NULL::dummy_enum));  # table
 # PostgreSQL list all enums
 SELECT pg_type.typname, pg_enum.enumlabel FROM pg_type JOIN pg_enum ON pg_enum.enumtypid = pg_type.oid;
 
+# Some PostgreSQL JSON magic
+select item from (select jsonb_array_elements(payload->'items') as item from mytable) as subquery where item->>'id' = '1234567890';
+
