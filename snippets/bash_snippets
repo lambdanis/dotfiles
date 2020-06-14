@@ -31,3 +31,10 @@ paste -sd "," -
 basename examples/EXAMPLE_1.txt  # EXAMPLE_1.txt
 basename examples/EXAMPLE_1.txt _1.txt  # EXAMPLE
 
+# delete dirs/files older (modified) than 7 days
+find . -mtime +7 -type d -exec rm -r {} \;
+find . -mtime +7 -type f -exec rm {} \;
+
+# wipe a file
+truncate -s0 FILE
+
