@@ -1,0 +1,5 @@
+# generate Secret yaml from file
+# --from-file can be multiplied
+# if SECRETKEY is not provided, FILENAME will be used
+kubectl create secret generic SECRETNAME --from-file=SECRETKEY=FILENAME --dry-run -oyaml
+
